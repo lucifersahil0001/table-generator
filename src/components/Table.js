@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import './TableGenerator.css';
 
 const TableGenerator = () => {
   const [number, setNumber] = useState('');
-  
+
   const handleInputChange = (e) => {
     const { value } = e.target;
     setNumber(value);
@@ -27,8 +28,9 @@ const TableGenerator = () => {
         value={number}
         onChange={handleInputChange}
         placeholder="Enter a number"
+        className="input-field"
       />
-      <table>
+      <table className="table">
         <tbody>{number && generateTable()}</tbody>
       </table>
     </div>
